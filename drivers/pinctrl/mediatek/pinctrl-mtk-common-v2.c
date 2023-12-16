@@ -788,6 +788,12 @@ int mtk_pinconf_bias_set_combo(struct mtk_pinctrl *hw,
 			return err;
     }
 
+	if (try_all_type & MTK_PULL_PD_TYPE) {
+		err = mtk_pinconf_bias_set_pd(hw, desc, pullup, arg);
+		if (!err)
+			return err;
+    }
+
 	if (try_all_type & MTK_PULL_PU_PD_TYPE) {
 		err = mtk_pinconf_bias_set_pu_pd(hw, desc, pullup, arg);
 		if (!err)
@@ -998,6 +1004,12 @@ int mtk_pinconf_bias_get_combo(struct mtk_pinctrl *hw,
 		err = mtk_pinconf_bias_get_pu_pd_rsel(hw, desc, pullup, enable);
 		if (!err)
 			return 0;
+	}
+
+	if (try_all_type & MTK_PULL_PD_TYPE) {
+		err = mtk_pinconf_bias_get_pd(hw, desc, pullup, enable);
+		if (!err)
+			return err;
 	}
 
 	if (try_all_type & MTK_PULL_PD_TYPE) {
