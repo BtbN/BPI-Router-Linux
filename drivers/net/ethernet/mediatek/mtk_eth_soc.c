@@ -5200,7 +5200,7 @@ static const struct mtk_soc_data mt7981_data = {
 		.desc_size = sizeof(struct mtk_tx_dma_v2),
 		.dma_max_len = MTK_TX_DMA_BUF_LEN_V2,
 		.dma_len_offset = 8,
-		.dma_size = MTK_DMA_SIZE(2K),
+		.dma_size = MTK_DMA_SIZE(4K),
 		.fq_dma_size = MTK_DMA_SIZE(2K),
 	},
 	.rx = {
@@ -5209,7 +5209,7 @@ static const struct mtk_soc_data mt7981_data = {
 		.dma_l4_valid = RX_DMA_L4_VALID_V2,
 		.dma_max_len = MTK_TX_DMA_BUF_LEN,
 		.dma_len_offset = 16,
-		.dma_size = MTK_DMA_SIZE(2K),
+		.dma_size = MTK_DMA_SIZE(1K),
 	},
 };
 
@@ -5229,7 +5229,7 @@ static const struct mtk_soc_data mt7986_data = {
 		.desc_size = sizeof(struct mtk_tx_dma_v2),
 		.dma_max_len = MTK_TX_DMA_BUF_LEN_V2,
 		.dma_len_offset = 8,
-		.dma_size = MTK_DMA_SIZE(2K),
+		.dma_size = MTK_DMA_SIZE(4K),
 		.fq_dma_size = MTK_DMA_SIZE(2K),
 	},
 	.rx = {
@@ -5238,7 +5238,7 @@ static const struct mtk_soc_data mt7986_data = {
 		.dma_l4_valid = RX_DMA_L4_VALID_V2,
 		.dma_max_len = MTK_TX_DMA_BUF_LEN,
 		.dma_len_offset = 16,
-		.dma_size = MTK_DMA_SIZE(2K),
+		.dma_size = MTK_DMA_SIZE(1K),
 	},
 };
 
@@ -5258,7 +5258,7 @@ static const struct mtk_soc_data mt7988_data = {
 		.desc_size = sizeof(struct mtk_tx_dma_v2),
 		.dma_max_len = MTK_TX_DMA_BUF_LEN_V2,
 		.dma_len_offset = 8,
-		.dma_size = MTK_DMA_SIZE(2K),
+		.dma_size = MTK_DMA_SIZE(4K),
 		.fq_dma_size = MTK_DMA_SIZE(4K),
 	},
 	.rx = {
@@ -5267,7 +5267,7 @@ static const struct mtk_soc_data mt7988_data = {
 		.dma_l4_valid = RX_DMA_L4_VALID_V2,
 		.dma_max_len = MTK_TX_DMA_BUF_LEN_V2,
 		.dma_len_offset = 8,
-		.dma_size = MTK_DMA_SIZE(2K),
+		.dma_size = MTK_DMA_SIZE(1K),
 	},
 };
 
