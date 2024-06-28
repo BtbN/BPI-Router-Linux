@@ -95,10 +95,10 @@ hostarch=$(uname -m) #r64:aarch64 r2: armv7l
 if [[ ! $hostarch =~ aarch64|armv ]];then
 	if [[ "$ARCH" == "arm64" ]]; then
 		if [[ -z "$(which aarch64-linux-gnu-gcc)" ]];then echo "please install gcc-aarch64-linux-gnu";exit 1;fi
-		export CROSS_COMPILE='ccache aarch64-linux-gnu-'
+		export CROSS_COMPILE='aarch64-linux-gnu-'
 	elif [[ "$ARCH" == "arm" ]]; then
 		if [[ -z "$(which arm-linux-gnueabihf-gcc)" ]];then echo "please install gcc-arm-linux-gnueabihf";exit 1;fi
-		export CROSS_COMPILE='ccache arm-linux-gnueabihf-'
+		export CROSS_COMPILE='arm-linux-gnueabihf-'
 	fi
 
 	crosscompile=1
