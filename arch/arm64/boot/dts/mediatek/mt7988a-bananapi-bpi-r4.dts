@@ -196,7 +196,7 @@
 				regulator-min-microvolt = <5090000>;
 				regulator-max-microvolt = <5090000>;
 				regulator-allowed-modes =
-				<RT5190A_OPMODE_AUTO RT5190A_OPMODE_FPWM>;
+				<RT5190A_OPMODE_AUTO>, <RT5190A_OPMODE_FPWM>;
 				regulator-boot-on;
 				regulator-always-on;
 			};
@@ -218,7 +218,7 @@
 				regulator-min-microvolt = <850000>;
 				regulator-max-microvolt = <850000>;
 				regulator-allowed-modes =
-				<RT5190A_OPMODE_AUTO RT5190A_OPMODE_FPWM>;
+				<RT5190A_OPMODE_AUTO>, <RT5190A_OPMODE_FPWM>;
 				regulator-boot-on;
 				regulator-always-on;
 			};
